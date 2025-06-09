@@ -3,12 +3,11 @@ import EducationSection from "./EducationSection";
 import PracticalSection from "./PracticalExperienceSection";
 
 export default function CV() {
-
   return (
     <div>
-      <h1 style={{textAlign: 'center'}}>CV Application</h1>
+      <h1 style={{ textAlign: "center" }}>CV Application</h1>
       <form action="">
-        <PersonalSection />      
+        <PersonalSection />
         <EducationSection />
         <PracticalSection />
         <button>Submit</button>

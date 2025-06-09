@@ -1,7 +1,6 @@
 import CV from "./CV";
 
 function App() {
-
   return (
     <>
       <CV />
