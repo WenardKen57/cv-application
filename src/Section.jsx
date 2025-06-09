@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Input from "./Input";
 
-export default function Section({ name = "No name", inputs }) {
+export default function Section({ name = "No name", inputs = { null: null } }) {
   const [section, setSection] = useState(inputs);
   const [isEdit, setIsEdit] = useState(true);
 
@@ -25,6 +25,7 @@ export default function Section({ name = "No name", inputs }) {
       {Object.entries(section).map(([key, value]) => (
         <Input
           key={key}
+          id={key}
           label={key}
           value={value}
           onChange={(event) => handleInputChange(event, key)}
@@ -43,7 +44,9 @@ export default function Section({ name = "No name", inputs }) {
       <h2>{name}</h2>
 
       {Object.entries(section).map(([key, value]) => (
-        <p key={key}>{value}</p>
+        <p key={key}>
+          {key}: {value}
+        </p>
       ))}
 
       <button type="button" onClick={edit}>

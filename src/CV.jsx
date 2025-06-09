@@ -6,12 +6,11 @@ export default function CV() {
   return (
     <div>
       <h1 style={{ textAlign: "center" }}>CV Application</h1>
-      <form action="">
+      <div>
         <PersonalSection />
         <EducationSection />
         <PracticalSection />
-        <button>Submit</button>
-      </form>
+      </div>
     </div>
   );
 }
