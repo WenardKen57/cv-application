@@ -3,13 +3,14 @@ import Input from "./Input";
 
 export default function PersonalSection() {
   const [personal, setPersonal] = useState({ name: "", email: "", phone: "" });
+  const [isEdit, setIsEdit] = useState(true);
 
-  function edit(event) {
-    console.log("Edit");
+  function edit() {
+    setIsEdit(true);
   }
 
-  function submit(event) {
-    console.log("Submitting...");
+  function submit() {
+    setIsEdit(false);
   }
 
   function handleInputChange(event, status) {
@@ -30,21 +31,38 @@ export default function PersonalSection() {
     }
   }
 
-  return (
+  return isEdit ? (
     <section>
-      <h2>Personal: {personal.name}</h2>
+      <h2>Personal:</h2>
       <Input
-        label={"Full name: "}
+        label={"Name (Full name): "}
+        value={personal.name}
         onChange={(event) => handleInputChange(event, "name")}
       />
       <Input
         label={"Email: "}
+        value={personal.email}
         onChange={(event) => handleInputChange(event, "email")}
       />
       <Input
         label={"Phone: "}
+        email
+        value={personal.phone}
         onChange={(event) => handleInputChange(event, "phone")}
       />
+      <button type="button" onClick={edit}>
+        Edit
+      </button>
+      <button type="button" onClick={submit}>
+        Submit
+      </button>
+    </section>
+  ) : (
+    <section>
+      <h2>Personal:</h2>
+      <p>Name: {personal.name}</p>
+      <p>Email: {personal.email}</p>
+      <p>Phone: {personal.phone}</p>
       <button type="button" onClick={edit}>
         Edit
       </button>
