@@ -8,7 +8,9 @@ export default function Input({
 }) {
   return (
     <>
-      <label htmlFor={id}>{label}</label>
+      <label htmlFor={id}>
+        {label.charAt(0).toUpperCase() + label.slice(1)}:{" "}
+      </label>
       <input
         id={id}
         type={type}

@@ -25,6 +25,7 @@ export default function Section({ name = "No name", inputs }) {
       {Object.entries(section).map(([key, value]) => (
         <Input
           key={key}
+          label={key}
           value={value}
           onChange={(event) => handleInputChange(event, key)}
         />
