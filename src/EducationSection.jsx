@@ -1,5 +1,13 @@
-export default function EducationSection() {
+import Input from "./Input";
 
-  return <h2>Education:</h2>
+export default function EducationSection() {
+  return (
+    <div>
+      <h2>Education: </h2>
+      <Input label={"Schoool name:"}/>
+      <Input label={"Title of study:"}/>
+      <Input type="date" label={"Date of study:"}/>
+    </div>
+  ); 
 
 }
