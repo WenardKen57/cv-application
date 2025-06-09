@@ -1,12 +1,7 @@
-import Input from "./Input";
+import Section from "./Section";
 
 export default function EducationSection() {
   return (
-    <section>
-      <h2>Education: </h2>
-      <Input label={"Schoool name:"} />
-      <Input label={"Title of study:"} />
-      <Input type="date" label={"Date of study:"} />
-    </section>
+    <Section name="Education" inputs={{ school: "Harvard", ass: "Bebe" }} />
   );
 }
