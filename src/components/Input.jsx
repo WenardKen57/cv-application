@@ -9,7 +9,7 @@ export default function Input({
   return (
     <>
       <label htmlFor={id}>
-        {label.charAt(0).toUpperCase() + label.slice(1)}:{" "}
+        {String(label.charAt(0).toUpperCase() + label.slice(1))}:{" "}
       </label>
       <input
         id={id}

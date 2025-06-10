@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "format": "prettier **/src/*.jsx --write",
+    "format": "prettier src --write",
     "preview": "vite preview"
   },
   "dependencies": {

@@ -15,8 +15,9 @@ export default function Section({ name = "No name", inputs = { null: null } }) {
 
   function handleInputChange(event, key) {
     const target = event.target;
+    console.log(section[key].label)
 
-    setSection({ ...section, [key]: target.value });
+    setSection({ ...section, [key]: {...section[key], value: target.value} });
   }
 
   return isEdit ? (
@@ -26,8 +27,8 @@ export default function Section({ name = "No name", inputs = { null: null } }) {
         <Input
           key={key}
           id={key}
-          label={key}
-          value={value}
+          label={`${value.label}`}
+          value={value.value}
           onChange={(event) => handleInputChange(event, key)}
         />
       ))}
@@ -45,7 +46,7 @@ export default function Section({ name = "No name", inputs = { null: null } }) {
 
       {Object.entries(section).map(([key, value]) => (
         <p key={key}>
-          {key}: {value}
+          {section[key].label}: {section[key].value}
         </p>
       ))}
 
