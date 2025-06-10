@@ -1,5 +1,5 @@
 import Section from "./Section";
-import "./style/PersonalSectionStyle.css"
+import "./style/PersonalSectionStyle.css";
 
 export default function PersonalSection() {
   return (
@@ -8,7 +8,7 @@ export default function PersonalSection() {
       className={"personalSection"}
       inputs={{
         name: { type: "text", label: "Name", value: "" },
-        email: { type: "email", label: "Email" },
+        email: { type: "email", label: "Email", required: true },
         phone: { type: "text", label: "Phone", required: true },
       }}
     />
