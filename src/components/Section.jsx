@@ -27,7 +27,7 @@ export default function Section({
       <h2>{name}</h2>
       {Object.entries(section).map(([key, value]) => (
         <Fragment key={key}>
-          <label htmlFor={key}>{String(value.label)}: </label>
+          <label htmlFor={key}><strong>{String(value.label)}: </strong></label>
           <input
             type={value.type}
             value={value.value ?? ""}
@@ -50,7 +50,7 @@ export default function Section({
 
       {Object.entries(section).map(([key, value]) => (
         <p key={key}>
-          {value.label}: {value.value}
+          {value.label}: <em>{value.value}</em>
         </p>
       ))}
 

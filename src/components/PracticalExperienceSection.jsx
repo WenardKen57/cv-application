@@ -17,16 +17,16 @@ export default function PracticalSection() {
         },
         mainResponsibility: {
           type: "text",
-          label: "Main responsibilities "
+          label: "Main responsibilities ",
         },
         startDate: {
           type: "date",
-          label: "From"
+          label: "From",
         },
         endDate: {
           type: "date",
-          label: "Until"
-        }
+          label: "Until",
+        },
       }}
     />
   );
