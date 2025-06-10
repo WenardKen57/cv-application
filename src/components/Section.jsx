@@ -1,5 +1,4 @@
 import { useState, Fragment } from "react";
-import Input from "./Input";
 
 export default function Section({
   name = "No name",
