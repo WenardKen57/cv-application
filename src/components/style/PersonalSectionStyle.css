@@ -1,0 +1,5 @@
+.personalSection {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+  background-color: aquamarine;
+}

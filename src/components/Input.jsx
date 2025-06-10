@@ -1,9 +1,9 @@
 export default function Input({
   placeholder = "",
-  label,
+  label = "No label",
   type = "text",
   id,
-  value,
+  value = "",
   onChange,
 }) {
   return (
