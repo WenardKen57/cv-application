@@ -1,6 +1,7 @@
 import PersonalSection from "./PersonalSection";
 import EducationSection from "./EducationSection";
 import PracticalSection from "./PracticalExperienceSection";
+import './style/style.css'
 
 export default function CV() {
   return (

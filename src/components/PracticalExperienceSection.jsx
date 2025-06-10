@@ -4,6 +4,7 @@ export default function PracticalSection() {
   return (
     <Section
       name="Practical Experience"
+      className={"practicalSection"}
       inputs={{
         companyName: {
           type: "text",

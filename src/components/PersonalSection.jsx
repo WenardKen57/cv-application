@@ -1,5 +1,4 @@
 import Section from "./Section";
-import "./style/PersonalSectionStyle.css";
 
 export default function PersonalSection() {
   return (
