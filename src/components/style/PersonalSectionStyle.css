@@ -1,7 +1,9 @@
 .personalSection {
+  padding: 0.5em;
   display: grid;
   grid-template-columns: repeat(2, minmax(150px, 1fr));
   background-color: aquamarine;
+  gap: 1em;
 }
 
 .personalSection > h2 {
@@ -11,5 +13,4 @@
 .personalSection > label {
   background-color: aqua;
   padding: 0.5rem;
-  border-radius: 1rem;
 }
